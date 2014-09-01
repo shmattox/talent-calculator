@@ -1,0 +1,383 @@
+body {
+        background: #0b0513;
+        color: white;
+}
+a {
+        color: white;
+        text-decoration: none;
+}
+.wrapper {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+}
+/*****************************************************************************************
+				  Talent Calculator
+******************************************************************************************/
+
+#hero_selector {
+        margin: 20px 0px 50px 0px;
+}
+
+#hero_selector a img {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #2C2C2C;
+        transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+}
+#hero_selector a img:hover {
+        border: 3px solid #75d2fd;
+        cursor: pointer;
+}
+
+/*********************************************************************
+			  Skill Info ( Calculations )
+**********************************************************************/
+#skill_info {
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+}
+#skill_info_top {
+        position:relative;
+}
+#skill_info_top #hero_level {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 32px;
+        color: #fff;
+}
+#skill_info_top img{
+        display: block;
+        float: left;
+        margin-right: 10px;
+}
+#skill_info_top div {
+        display: inline-block;
+}
+#skill_info_top div h2 {
+        margin: 0px;
+}
+#skill_info ul {
+        -webkit-padding-start: 0px;
+}
+#skill_info ul li {
+        list-style: none;
+}
+#skill_info_calculation input[type*=range] {
+        width: 100%;
+}
+#skill_info_calculation ul li {
+        display: inline-block;
+        padding: 10px 0px;
+        width: 23.9%;
+        box-sizing: border-box;
+        background: #1f0544!important;
+        color: #75d2fd;
+        text-align: center;
+        margin: 2px 0px;
+        font-size: 9px;
+}
+#skill_info_calculation ul li span {
+        color: white;
+        display: block;
+        width: 100%;
+        font-size: 16px;
+}
+
+
+/*********************************************************************
+			   Skill Abilities
+**********************************************************************/
+
+#skill_info_abilities {
+        margin-top: -8px;
+}
+#skill_info_abilities ul li p:nth-of-type(2) {
+        font-size: 11px;
+        color: #75d2fd;
+}
+
+#skill_info_abilities img {
+        float: left;
+        background: black;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+}
+#skill_info_abilities ul li {
+        position:relative;
+        background: #1f0544!important;
+        margin: 3px 0px;
+        display: block;
+        float: left;
+        width: 100%;
+}
+
+#skill_info_abilities ul li p {
+        font-size: 21px;
+        margin: 0px;
+        padding: 0px;
+}
+
+#skill_info_abilities ul li p span:nth-of-type(2) {
+        color: #75d2fd;
+        font-size: 15px;
+        margin-left: 4px;
+}
+
+#skill_info_abilities ul li div {
+        width: 100%;
+        display: block;
+        float: left;
+        font-size: 10px;
+        padding: 10px;
+        color: #75d2fd;
+}
+
+.toggle-info {
+        position: absolute;
+        top: 3px;
+        right: 15px;
+        width: 10px !important;
+        font-weight: bold;
+        font-size: 16px !important;
+}
+
+/*********************************************************************
+				Skill Tree
+**********************************************************************/ 
+
+#skill_tree {
+        /*padding-left: 30px;
+        padding-top: 69px;
+        display: inline-block;*/
+        display: block;
+        padding-right: 69px;
+        float: left;
+        vertical-align: top;
+        width: 75%;
+        min-height: 400px;
+        box-sizing: border-box;
+}
+#skin_video_overlay {
+        position: absolute;
+        z-index: -1;
+}
+#skill_tree video {
+        width: 100%;
+        max-width: 999px;
+        position: absolute;
+        z-index: -2;
+}
+
+@media screen and (max-width: 768px) {
+        #skin_video_overlay,#skill_tree video {display: none;}
+}
+.skill-tree-branch {
+        width: 100%;
+        float: left;
+}
+.skill-tree-node {
+        position:relative;
+        display: block;
+        float: left;
+        margin: 10px;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+}
+.skill-tree-node.hover{
+        z-index: 999;
+}
+.skill-tree-node.active, .skill-tree-node.hover {
+        filter: normal;
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        box-shadow: 0px 0px 10px #75d2fd;
+}
+
+.main-node {
+        position:relative;
+        color: white;
+        text-align: right;
+        line-height: 30px;
+        padding-right: 5px;
+        float:left;
+        margin: 10px;
+        display: block;
+        border: 3px solid #2C2C2C;
+        width: 64px;
+        height: 64px;
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        transition: all 0s ease-in;
+        -webkit-transition: all 0s ease-in;
+}
+.main-node:hover {
+        color: white;
+        text-decoration: none;
+}
+.main-node.number-selected {
+        border: 3px solid #75d2fd;
+        transition: all .5s ease-in;
+        -webkit-transition: all .5s ease-in;
+}
+
+.main-node:before {
+        color: #5A5858;
+        content: '4';
+        position: absolute;
+        left: 7px;
+        bottom: 4px;
+        font-size: 25px;
+        opacity: .5;
+}
+[data-tier='1'] .main-node:before {
+        content: '1';
+}
+[data-tier='4'] .main-node:before {
+        content: '4';
+}
+[data-tier='7'] .main-node:before {
+        content: '7';
+}
+[data-tier='10'] .main-node:before {
+        content: '10';
+}
+[data-tier='13'] .main-node:before {
+        content: '13';
+}
+[data-tier='16'] .main-node:before {
+        content: '16';
+}
+[data-tier='20'] .main-node:before {
+        content: '20';
+}
+/*********************************************************************
+				Tooltip
+**********************************************************************/ 
+.talent-tooltip {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        z-index: 999;
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 0;
+}
+
+.talent-tooltip .close-tooltip {
+        color: white;
+        position: absolute;
+        top: 1px;
+        right: 5px;
+        font-weight: bold;
+}
+.talent-tooltip .close-tooltip:hover {
+        opacity: .7;
+}
+.hover .talent-tooltip {
+        background: #1f0544;
+        width: 300px;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+}
+.talent-tooltip div {
+        display: inline-block;
+}
+.talent-tooltip img, .talent-tooltip h3 {
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+}
+.talent-tooltip img, .talent-tooltip h4 span {
+        color: #75d2fd;
+}
+.talent-tooltip img, .talent-tooltip h4 {
+        color: white;
+}
+.talent-tooltip img {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        width: 64px;
+        height: 64px;
+}
+
+/*********************************************************************
+			Selected Node Info
+**********************************************************************/ 
+.selected-node-info {
+        opacity: 0;
+        padding: 10px;
+        float: right;
+        width: 500px;
+        color: #75d2fd;
+        width: 100%;
+        max-width: 360px;
+        font-size: 12px;
+        transition: all .5s ease-in;
+        -webkit-transition: all .5s ease-in;
+}
+.selected-node-info.active {
+        opacity: 1;
+        border: 1px solid #75d2fd;
+}
+.selected-node-info.active span {
+        color: #fff;
+}
+#comments.commentator-area {
+        padding: 50px 20px !important;
+}
+#comments {
+        float: left !important;
+        width: 100% !important;
+}
+/*********************************************************************
+			Mobile Media Queries
+**********************************************************************/ 
+
+@media screen and (max-width: 1000px) {
+        #skill_info, #skill_tree, .selected-node-info.active {
+                width: 100% !important;
+                max-width: 100% !important;
+        }
+        #skill_tree {
+                padding: 0px !important;
+         }
+        .skill-tree-node, .main-node {
+                margin: 0px !important;
+        }
+        #hero_selector a img {
+                width: 46px !important;
+                height: 46px !important;
+        }
+        #hero_selector {
+                margin: 0px 0px 20px 0px;
+        }
+}
+@media screen and (max-width: 768px) {
+        .main-node, .skill-tree-node {
+                width: 55px;
+                height: 55px;
+        }
+        .skill-tree-node > img {
+                width: 100%;
+        }
+        .talent-tooltip  {
+                display: none !important;
+        }
+}

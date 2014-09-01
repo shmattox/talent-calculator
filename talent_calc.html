@@ -1,0 +1,79 @@
+<!Doctype html>
+<html>
+<head>
+<title>Heroes of the Storm Talent Calculator </title>
+<link rel="stylesheet" href="style.css"/>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+        <div id="hero_selector"></div>
+
+        <div id="skill_tree">
+                <img id="skin_video_overlay" src="images/calc_skin_overlay.png" alt=""/>
+                <video style="width: 100%;min-width: 480px;" autoplay="" loop="" class="" src="//opcdn.battle.net/static/heroes/videos/heroes/skins/Tyrael1_U.webm" type="video/webm"></video>
+
+                <div class="skill-tree-branch" data-tier="1">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+                <div class="skill-tree-branch" data-tier="4">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+                <div class="skill-tree-branch" data-tier="7">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+                <div class="skill-tree-branch" data-tier="10">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+                <div class="skill-tree-branch" data-tier="13">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+                <div class="skill-tree-branch" data-tier="16">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+                <div class="skill-tree-branch" data-tier="20">
+                        <a class="main-node" href="#"></a>
+                        <div class="selected-node-info"></div>
+                </div>
+        </div>
+        <div id="skill_info">
+                <div id="skill_info_top">
+                        <img src="images/champs/tyrael.jpg" alt="hero portrait"/>
+                        <div>
+                                <h2>Tyrael</h2>
+                                <p>Heroes Talent Build</p>
+                        </div>
+                        <div id="hero_level">1</div>
+                </div>
+                <div id="skill_info_calculation">
+                        <input type="range" min="1" max="25" step="1" value="1" name="Level"/>
+                        
+                        <ul>
+                                <li><span class="number" data-gain="50" data-base="1020">1020</span>Health</li>
+                                <li><span class="number" data-gain=".44" data-base="2.12">2.12</span>H.Regen</li>
+                                <li><span class="number" data-gain="10" data-base="500">500</span>Mana</li>
+                                <li><span class="number" data-gain="0.1" data-base="3">3</span>M.Regen</li>
+                                <li><span class="number">4.40</span>Move SPD</li>
+                                <li><span class="number" data-gain="-0.03" data-base="1">1</span>Atk SPD</li>
+                                <li><span class="number">Melee</span>Range</li>
+                                <li><span class="number" data-gain="6" data-base="49">49</span>Damage</li>
+                        </ul>
+                </div>
+                <div id="skill_info_abilities">
+                        <ul>
+                                <li data-mod="100"><img src="images/auto-attack.png" alt=""/><p><span>Auto Attack</span></p></li>
+                        </ul>
+                </div>
+        </div>
+ </div>                       
+</body>
+</html>
